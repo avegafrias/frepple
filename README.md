@@ -1,6 +1,28 @@
 [![Continous integration](https://github.com/frePPLe/frepple/actions/workflows/ubuntu24.yml/badge.svg)](https://github.com/frePPLe/frepple/actions/workflows/ubuntu24.yml)
 
-# frePPLe
+# frePPLe fork for Partes Industriales Laguna
+
+## Building the image
+
+From the top of the repo:
+```
+docker build -f frepple.dockerfile -t frepple:9.16.0 .
+```
+
+## Starting the database and frePPLe containers
+
+```
+docker run --name=db -d --rm -e POSTGRES_USER=frepple -e POSTGRES_PASSWORD=frepple \
+       -e POSTGRES_DB=frepple -e PGHOST=127.0.0.1 -e PGPORT=5432 --network=host    \
+       -v $PWD/data:/var/lib/postgresql/data postgres:16 postgres -c log_statement=all
+
+docker run --name=frepple -d --rm -e POSTGRES_USER=frepple -e POSTGRES_HOST=localhost \
+       -e POSTGRES_PORT=5432 --network=host frepple:9.16.0
+```
+
+---
+
+# frePPLe original README
 
 ## Open source supply chain planning
 
