@@ -1,0 +1,504 @@
+[
+{
+  "model": "database_PIL.client",
+  "pk": 0,
+  "fields": {
+    "name": "John"
+  }
+},
+{
+  "model": "database_PIL.client",
+  "pk": 1,
+  "fields": {
+    "name": "Bob"
+  }
+},
+{
+  "model": "database_PIL.client",
+  "pk": 2,
+  "fields": {
+    "name": "James"
+  }
+},
+{
+  "model": "database_PIL.purchaseorder",
+  "pk": 0,
+  "fields": {
+    "client": 0,
+    "status": "ongoing"
+  }
+},
+{
+  "model": "database_PIL.purchaseorder",
+  "pk": 1,
+  "fields": {
+    "client": 1,
+    "status": "complete"
+  }
+},
+{
+  "model": "database_PIL.purchaseorder",
+  "pk": 2,
+  "fields": {
+    "client": 2,
+    "status": "ongoing"
+  }
+},
+{
+  "model": "database_PIL.product",
+  "pk": "0",
+  "fields": {
+    "line": "line 0",
+    "description": "line 0 desc",
+    "weight": "4.00",
+    "inventory": 3,
+    "inventory_last_updated": "2026-01-01T02:01:00"
+  }
+},
+{
+  "model": "database_PIL.product",
+  "pk": "1",
+  "fields": {
+    "line": "line 1",
+    "description": "line 1 desc",
+    "weight": "4.50",
+    "inventory": 4,
+    "inventory_last_updated": "2026-01-01T02:01:00"
+  }
+},
+{
+  "model": "database_PIL.product",
+  "pk": "2",
+  "fields": {
+    "line": "line 2",
+    "description": "line 2 desc",
+    "weight": "5.00",
+    "inventory": 5,
+    "inventory_last_updated": "2026-01-01T02:01:00"
+  }
+},
+{
+  "model": "database_PIL.product",
+  "pk": "3",
+  "fields": {
+    "line": "line 3",
+    "description": "line 3 desc",
+    "weight": "5.50",
+    "inventory": 6,
+    "inventory_last_updated": "2026-01-01T02:01:00"
+  }
+},
+{
+  "model": "database_PIL.product",
+  "pk": "4",
+  "fields": {
+    "line": "line 4",
+    "description": "line 4 desc",
+    "weight": "6.00",
+    "inventory": 7,
+    "inventory_last_updated": "2026-01-01T02:01:00"
+  }
+},
+{
+  "model": "database_PIL.orderentry",
+  "pk": 0,
+  "fields": {
+    "purchase_order": 0,
+    "product": "0",
+    "quantity": 5
+  }
+},
+{
+  "model": "database_PIL.orderentry",
+  "pk": 1,
+  "fields": {
+    "purchase_order": 1,
+    "product": "1",
+    "quantity": 10
+  }
+},
+{
+  "model": "database_PIL.orderentry",
+  "pk": 2,
+  "fields": {
+    "purchase_order": 2,
+    "product": "4",
+    "quantity": 3
+  }
+},
+{
+  "model": "database_PIL.operation",
+  "pk": 0,
+  "fields": {
+    "description": "product 0"
+  }
+},
+{
+  "model": "database_PIL.operation",
+  "pk": 1,
+  "fields": {
+    "description": "product 1"
+  }
+},
+{
+  "model": "database_PIL.operation",
+  "pk": 2,
+  "fields": {
+    "description": "product 2"
+  }
+},
+{
+  "model": "database_PIL.operation",
+  "pk": 3,
+  "fields": {
+    "description": "product 3"
+  }
+},
+{
+  "model": "database_PIL.operation",
+  "pk": 4,
+  "fields": {
+    "description": "product 4, needs 1 p2"
+  }
+},
+{
+  "model": "database_PIL.operation",
+  "pk": 5,
+  "fields": {
+    "description": "product 4, needs 2 p3"
+  }
+},
+{
+  "model": "database_PIL.productdependency",
+  "pk": 1,
+  "fields": {
+    "product": "0",
+    "operation": 0,
+    "quantity": 1
+  }
+},
+{
+  "model": "database_PIL.productdependency",
+  "pk": 2,
+  "fields": {
+    "product": "1",
+    "operation": 1,
+    "quantity": 1
+  }
+},
+{
+  "model": "database_PIL.productdependency",
+  "pk": 3,
+  "fields": {
+    "product": "2",
+    "operation": 2,
+    "quantity": 1
+  }
+},
+{
+  "model": "database_PIL.productdependency",
+  "pk": 4,
+  "fields": {
+    "product": "3",
+    "operation": 3,
+    "quantity": 1
+  }
+},
+{
+  "model": "database_PIL.productdependency",
+  "pk": 5,
+  "fields": {
+    "product": "4",
+    "operation": 4,
+    "quantity": 1
+  }
+},
+{
+  "model": "database_PIL.productdependency",
+  "pk": 6,
+  "fields": {
+    "product": "4",
+    "operation": 5,
+    "quantity": 1
+  }
+},
+{
+  "model": "database_PIL.operationdependency",
+  "pk": 1,
+  "fields": {
+    "operation": 4,
+    "product": "2",
+    "quantity": 1
+  }
+},
+{
+  "model": "database_PIL.operationdependency",
+  "pk": 2,
+  "fields": {
+    "operation": 5,
+    "product": "3",
+    "quantity": 2
+  }
+},
+{
+  "model": "database_PIL.productionfloor",
+  "pk": 0,
+  "fields": {
+    "description": "for product 0"
+  }
+},
+{
+  "model": "database_PIL.productionfloor",
+  "pk": 1,
+  "fields": {
+    "description": "for product 1"
+  }
+},
+{
+  "model": "database_PIL.productionfloor",
+  "pk": 2,
+  "fields": {
+    "description": "for product 2, 3, and 4"
+  }
+},
+{
+  "model": "database_PIL.productionsprint",
+  "pk": 1,
+  "fields": {
+    "start_date": "2026-02-01T02:01:00",
+    "end_date": "2026-02-08T02:01:00",
+    "production_floor": 0
+  }
+},
+{
+  "model": "database_PIL.productionsprint",
+  "pk": 2,
+  "fields": {
+    "start_date": "2026-02-05T02:01:00",
+    "end_date": "2026-02-12T02:01:00",
+    "production_floor": 1
+  }
+},
+{
+  "model": "database_PIL.productionsprint",
+  "pk": 3,
+  "fields": {
+    "start_date": "2026-02-10T02:01:00",
+    "end_date": "2026-02-18T02:01:00",
+    "production_floor": 2
+  }
+},
+{
+  "model": "database_PIL.operator",
+  "pk": 0,
+  "fields": {
+    "name": "Paul"
+  }
+},
+{
+  "model": "database_PIL.operator",
+  "pk": 1,
+  "fields": {
+    "name": "Steve"
+  }
+},
+{
+  "model": "database_PIL.operator",
+  "pk": 2,
+  "fields": {
+    "name": "Liam"
+  }
+},
+{
+  "model": "database_PIL.productionstation",
+  "pk": 0,
+  "fields": {
+    "production_floor": 0,
+    "operation": 0,
+    "operator": 0
+  }
+},
+{
+  "model": "database_PIL.productionstation",
+  "pk": 1,
+  "fields": {
+    "production_floor": 1,
+    "operation": 1,
+    "operator": 1
+  }
+},
+{
+  "model": "database_PIL.productionstation",
+  "pk": 2,
+  "fields": {
+    "production_floor": 2,
+    "operation": 2,
+    "operator": 2
+  }
+},
+{
+  "model": "database_PIL.productionstation",
+  "pk": 3,
+  "fields": {
+    "production_floor": 2,
+    "operation": 3,
+    "operator": 2
+  }
+},
+{
+  "model": "database_PIL.productionstation",
+  "pk": 4,
+  "fields": {
+    "production_floor": 2,
+    "operation": 4,
+    "operator": 2
+  }
+},
+{
+  "model": "database_PIL.productionstation",
+  "pk": 5,
+  "fields": {
+    "production_floor": 2,
+    "operation": 5,
+    "operator": 2
+  }
+},
+{
+  "model": "database_PIL.operatorcapacity",
+  "pk": 1,
+  "fields": {
+    "operator": 0,
+    "operation": 0,
+    "capacity": 20
+  }
+},
+{
+  "model": "database_PIL.operatorcapacity",
+  "pk": 2,
+  "fields": {
+    "operator": 1,
+    "operation": 1,
+    "capacity": 20
+  }
+},
+{
+  "model": "database_PIL.operatorcapacity",
+  "pk": 3,
+  "fields": {
+    "operator": 2,
+    "operation": 2,
+    "capacity": 10
+  }
+},
+{
+  "model": "database_PIL.operatorcapacity",
+  "pk": 4,
+  "fields": {
+    "operator": 2,
+    "operation": 3,
+    "capacity": 10
+  }
+},
+{
+  "model": "database_PIL.operatorcapacity",
+  "pk": 5,
+  "fields": {
+    "operator": 2,
+    "operation": 4,
+    "capacity": 5
+  }
+},
+{
+  "model": "database_PIL.operatorcapacity",
+  "pk": 6,
+  "fields": {
+    "operator": 2,
+    "operation": 5,
+    "capacity": 5
+  }
+},
+{
+  "model": "database_PIL.workorder",
+  "pk": 0,
+  "fields": {
+    "order_entry": 0,
+    "production_station": 0,
+    "quantity": 5,
+    "status": "ongoing"
+  }
+},
+{
+  "model": "database_PIL.workorder",
+  "pk": 1,
+  "fields": {
+    "order_entry": 1,
+    "production_station": 1,
+    "quantity": 10,
+    "status": "complete"
+  }
+},
+{
+  "model": "database_PIL.workorder",
+  "pk": 2,
+  "fields": {
+    "order_entry": 2,
+    "production_station": 2,
+    "quantity": 3,
+    "status": "complete"
+  }
+},
+{
+  "model": "database_PIL.workorder",
+  "pk": 3,
+  "fields": {
+    "order_entry": 2,
+    "production_station": 3,
+    "quantity": 6,
+    "status": "complete"
+  }
+},
+{
+  "model": "database_PIL.workorder",
+  "pk": 4,
+  "fields": {
+    "order_entry": 2,
+    "production_station": 4,
+    "quantity": 3,
+    "status": "ongoing"
+  }
+},
+{
+  "model": "database_PIL.workorder",
+  "pk": 5,
+  "fields": {
+    "order_entry": 2,
+    "production_station": 5,
+    "quantity": 3,
+    "status": "pending"
+  }
+},
+{
+  "model": "database_PIL.workorderdependency",
+  "pk": 1,
+  "fields": {
+    "work_order": 4,
+    "needed_work_order": 2
+  }
+},
+{
+  "model": "database_PIL.workorderdependency",
+  "pk": 2,
+  "fields": {
+    "work_order": 5,
+    "needed_work_order": 3
+  }
+},
+{
+  "model": "database_PIL.workorderdependency",
+  "pk": 3,
+  "fields": {
+    "work_order": 5,
+    "needed_work_order": 4
+  }
+}
+]

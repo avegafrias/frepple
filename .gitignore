@@ -2,6 +2,7 @@
 /static
 /build*
 /logs
+/data
 /node_modules
 /.pnpm-store
 /localsettings*
